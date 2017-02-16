@@ -1,0 +1,54 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>student detials</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="font-awesome-4.6.3\css\font-awesome.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<% include navigation/nav.ejs %>
+  <h2 class="text-center text-danger">Users Detials..</h2>
+  
+  
+              
+     
+  <table class="table">
+    <thead>
+      <tr>
+        <th>User Name</th>
+        <th>Password</th>
+        <th>DoB</th>
+        <th>Mobile No</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% for(var i=0;i< data.length;i++) { %>
+      <tr>
+        <td><%= data[i].Uname %></td>
+        <td><%= data[i].Password %></td>
+        <td><%= data[i].dob %></td>
+        <td><%= data[i].mobileno %></td>
+
+        <td><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+
+        <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+        
+      </tr>      
+        <%   } %>
+    </tbody>
+  </table>
+
+
+</body>
+</html>
